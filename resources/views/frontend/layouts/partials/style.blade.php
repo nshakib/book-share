@@ -1,0 +1,19 @@
+<?php
+/**
+ * @Author: Md Nazmus Shakib
+ * @Date:   2021-08-25 23:48:05
+ * @Last Modified by:   Md Nazmus Shakib
+ * @Last Modified time: 2021-08-25 23:48:23
+ */
+?>
+ <!-- Bootstrap core CSS -->
+ <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+
+
+ <!-- Font -->
+ <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300i,400,400i,600" rel="stylesheet">
+
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+ <!-- Custom CSS -->
+ <link href="{{ asset('css/custom.css') }}" rel="stylesheet">

@@ -1,16 +1,16 @@
 <?php
 /**
  * @Author: Md Nazmus Shakib
- * @Date:   2021-08-20 21:09:51
+ * @Date:   2021-08-27 10:54:47
  * @Last Modified by:   Md Nazmus Shakib
- * @Last Modified time: 2021-08-30 10:37:15
+ * @Last Modified time: 2021-08-27 11:01:40
  */
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCategoriesTable extends Migration
+class CreateBookTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -19,12 +19,10 @@ class CreateCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('book_tags', function (Blueprint $table) {
             $table->id();
-            $table->string('name',50);
-            $table->string('slug')->unique();
-            $table->text('description')->nullable();
-            $table->unsignedSmallInteger('parent_id')->nullable();
+            $table->unsignedSmallInteger('book_id');
+            $table->unsignedSmallInteger('tag_id');
             $table->timestamps();
         });
     }
@@ -36,6 +34,6 @@ class CreateCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('book_tags');
     }
 }

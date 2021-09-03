@@ -3,7 +3,7 @@
  * @Author: Md Nazmus Shakib
  * @Date:   2021-08-20 20:50:40
  * @Last Modified by:   Md Nazmus Shakib
- * @Last Modified time: 2021-08-30 11:56:45
+ * @Last Modified time: 2021-09-03 11:13:25
  */
 
 
@@ -41,7 +41,9 @@ Route::prefix('admin')->group(function () {
     //books part
     Route::prefix('books')->group(function () {
         Route::get('/', [Backend\BooksController::class,'index'])->name('admin.books.index');
-        Route::get('/{id}', [Backend\BooksController::class,'show'])->name('admin.books.show');
+        //Route::get('/{id}', [Backend\BooksController::class,'show'])->name('admin.books.show');
+        Route::get('/create', [Backend\BooksController::class,'create'])->name('admin.books.create');
+        Route::post('/store', [Backend\BooksController::class,'store'])->name('admin.books.store');
 
     });
 
